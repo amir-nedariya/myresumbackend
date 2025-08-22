@@ -22,6 +22,11 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+// Root route (important ✅)
+app.get("/", (req, res) => {
+  res.send("Backend running successfully ✅");
+});
+
 // MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
