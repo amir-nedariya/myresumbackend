@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
 app.get("/", (req, res) => {
   res.send("Backend running successfully ✅");
 });
-
+ 
 // MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
